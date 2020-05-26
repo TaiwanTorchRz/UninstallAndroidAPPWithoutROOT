@@ -13,9 +13,7 @@ Public Class Home
     End Sub
 
     Dim listthr As Thread '宣告多線程
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
+
     Dim reloadthr As Thread
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsgBox("注意:部分中國手機無法支援!!" + vbCrLf + "請不要嘗試解除安裝你沒把握的應用程式" + vbCrLf + "解除安裝系統必要程式會造成Android系統的損壞" + vbCrLf + "GitTorch Studio 並不會為您的誤操作負責" + vbCrLf + "當您按下確定之後即同意以上條款", vbExclamation, "免責聲明")
@@ -234,9 +232,6 @@ Public Class Home
         Label1.ForeColor = DefaultForeColor
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub BoxSearch_Leave(sender As Object, e As EventArgs) Handles boxSearch.Leave
         boxSearch.Text = "搜尋..."
@@ -260,7 +255,6 @@ Public Class Home
         Catch
 
         End Try
-
         'uninstallthr = New Thread(AddressOf Me.Uninstall)
     End Sub
 End Class
