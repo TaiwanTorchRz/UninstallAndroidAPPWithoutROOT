@@ -91,32 +91,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        '''</summary>
-        Friend ReadOnly Property close() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("close", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  查詢類型 System.Byte[] 的當地語系化資源。
         '''</summary>
         Friend ReadOnly Property fastboot() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("fastboot", resourceCulture)
                 Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        '''</summary>
-        Friend ReadOnly Property PictureBox2_Image() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("PictureBox2.Image", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         

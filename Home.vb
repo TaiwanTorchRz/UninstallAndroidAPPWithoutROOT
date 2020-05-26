@@ -234,6 +234,9 @@ Public Class Home
         Label1.ForeColor = DefaultForeColor
     End Sub
 
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 
     Private Sub BoxSearch_Leave(sender As Object, e As EventArgs) Handles boxSearch.Leave
         boxSearch.Text = "搜尋..."

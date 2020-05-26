@@ -127,14 +127,8 @@
   <data name="AdbWinUsbApi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\platform-tools_r28.0.2-windows\platform-tools\AdbWinUsbApi.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fastboot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\platform-tools_r28.0.2-windows\platform-tools\fastboot.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PictureBox2.Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\PictureBox2.Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trashcan_cwz_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\trashcan_cwz_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
