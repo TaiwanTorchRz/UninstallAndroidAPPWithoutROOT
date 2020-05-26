@@ -11,10 +11,10 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("解除原廠軟體不須ROOT")>
 <Assembly: AssemblyDescription("解除原廠軟體不須ROOT")>
-<Assembly: AssemblyCompany("gitTorch Studio")>
+<Assembly: AssemblyCompany("GitTorch Studio")>
 <Assembly: AssemblyProduct("解除原廠軟體不須ROOT")>
 <Assembly: AssemblyCopyright("高雄高工 109級資訊乙 陳德生")>
-<Assembly: AssemblyTrademark("Copyright © gitTorch Studio 保留一切權利")>
+<Assembly: AssemblyTrademark("Copyright © GitTorch Studio 保留一切權利")>
 
 <Assembly: ComVisible(False)>
 
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' 設為預設，如下所示:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("3.0.0.1")>
+<Assembly: AssemblyFileVersion("3.0.0.1")>
 <Assembly: NeutralResourcesLanguage("zh-TW")>
