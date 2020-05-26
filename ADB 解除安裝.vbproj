@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5B1A662-F4E0-488B-8DA7-711D39D95792}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>解除原廠軟體不須ROOT.My.MyApplication</StartupObject>
+    <RootNamespace>解除原廠軟體不須ROOT</RootNamespace>
+    <AssemblyName>解除原廠軟體不須ROOT</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>zh-TW</TargetCulture>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>解除原廠軟體不須ROOT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>解除原廠軟體不須ROOT.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>trashcan_cwz_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>603A2A192A6A14213CF159324281DFB0380666B9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ADB 解除安裝_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ADB 解除安裝_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\api\annotations.zip" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\deployagent" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\lib64\libc++.so" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\mke2fs.conf" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\source.properties" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\bin\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\bin\update_chrome_reference_binaries" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\bin\run_eslint" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\bin\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\eslint\smoke_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\eslint\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\LICENSE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\README.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\lab\commits.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\lab\hardware.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\lab\keychain_unlock.sh" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\node_runner\node_runner\minify" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\node_runner\node_runner\node_binaries.json" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\node_runner\node_runner\node_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\node_runner\node_runner\package.json" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\node_runner\node_runner\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\setup.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\decorators.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\decorators_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\log.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\log_io_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\meta_class.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\multiprocessing_shim.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\parsed_trace_events.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\trace_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_impl\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_event_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_time.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\trace_time_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\py_trace_event\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\PRESUBMIT.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\atexit_with_log.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\binary_manager.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\binary_manager_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\camel_case.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\camel_case_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\chrome_binaries.json" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\class_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\class_util_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\cloud_storage.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\cloud_storage_global_lock.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\cloud_storage_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\contextlib_ext.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\contextlib_ext_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\dependency_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\discover.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\discover_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\expectations_parser.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\expectations_parser_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\file_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\file_util_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\lock.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\lock_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\logging_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\logging_util_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\memory_debug.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\py_utils_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\base_symbol.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\class_definition.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\function_definition.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\import_statement.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\reference.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\annotated_symbol\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\module.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\offset_token.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\snippet.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor_util\move.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\refactor_util\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\retry_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\retry_util_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\shell_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\slots_metaclass.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\slots_metaclass_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\tempfile_ext.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\tempfile_ext_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\test_data\discoverable_classes\another_discover_dummyclass.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\test_data\discoverable_classes\discover_dummyclass.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\test_data\discoverable_classes\parameter_discover_dummyclass.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\test_data\discoverable_classes\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\xvfb.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\bin\run_py_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\fake_fs.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\fake_fs_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\generate.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\generate_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\html_generation_controller.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\html_module.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\html_module_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\js_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\js_utils_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\module.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\module_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\parse_html_deps.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\parse_html_deps_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\project.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\resource.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\resource_loader.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\resource_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\strip_js_comments.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\strip_js_comments_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\style_sheet.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\style_sheet_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\py_vulcanize\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\cssmin.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\LICENSE.cssmin" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\main.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\write.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\BENCHMARKS" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\CHANGES" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\CLASSIFIERS" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\DESCRIPTION" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\PROVIDES" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\SUMMARY" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\LICENSE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\MANIFEST" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\package.cfg" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\PKG-INFO" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\rcssmin.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\README.rst" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\run_tests.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\setup.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_00.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_00.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_01.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_01.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_02.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_02.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_03.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_03.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_04.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_04.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_05.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_05.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_06.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_06.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_07.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_07.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_08.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_08.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_09.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_09.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_10.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_10.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_11.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\atgroup_11.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_00.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_00.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_01.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_01.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_02.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_02.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_03.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_03.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_04.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\comment_04.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_00.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_00.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_01.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_01.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_02.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_02.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_03.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_03.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_04.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_04.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_05.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_05.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_06.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\escape_06.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_00.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_00.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_01.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_01.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_02.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\first_02.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_00.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_00.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_01.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_01.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_02.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_02.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_03.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_03.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_04.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_04.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_05.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_05.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_06.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_06.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_07.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_07.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_08.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_08.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_09.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\out\url_09.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\background-position.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\border-none.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\box-model-hack.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527974.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527991.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527998.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2528034.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\charset-media.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\color-simple.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\color.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\comment.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\concat-charset.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-doublequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-eof.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-linebreakindata.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-noquotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-singlequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-twourls.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-dbquote-font.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-doublequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-noquotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-singlequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-noquote-multiline-font.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-doublequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-noquotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-singlequotes.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-yuiapp.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-singlequote-font.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\decimals.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dollar-header.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\font-face.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\ie5mac.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-empty-class.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-multi.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-test.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\opacity-filter.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\background-position.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\background-position.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\border-none.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\border-none.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\box-model-hack.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\box-model-hack.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527974.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527974.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527991.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527991.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527998.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2527998.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2528034.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\bug2528034.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\charset-media.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\charset-media.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\color-simple.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\color-simple.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\color.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\color.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\comment.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\comment.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\concat-charset.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\concat-charset.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-doublequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-doublequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-eof.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-eof.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-linebreakindata.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-linebreakindata.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-noquotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-noquotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-singlequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-singlequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-twourls.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-base64-twourls.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-dbquote-font.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-dbquote-font.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-doublequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-doublequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-noquotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-noquotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-singlequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-nonbase64-singlequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-noquote-multiline-font.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-noquote-multiline-font.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-doublequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-doublequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-noquotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-noquotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-singlequotes.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-singlequotes.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-yuiapp.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-realdata-yuiapp.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-singlequote-font.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dataurl-singlequote-font.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\decimals.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\decimals.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dollar-header.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\dollar-header.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\font-face.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\font-face.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\ie5mac.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\ie5mac.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-empty-class.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-empty-class.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-multi.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-multi.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-test.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\media-test.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\opacity-filter.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\opacity-filter.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-case.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-case.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-new-line.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-new-line.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-strings.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\preserve-strings.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\pseudo-first.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\pseudo-first.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\pseudo.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\pseudo.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\special-comments.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\special-comments.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\star-underscore-hacks.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\star-underscore-hacks.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\string-in-comment.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\string-in-comment.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\webkit-transform.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\webkit-transform.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\zeros.out" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\out\zeros.out.b" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-case.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-new-line.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-strings.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\pseudo-first.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\pseudo.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\README" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\special-comments.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\star-underscore-hacks.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\string-in-comment.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\webkit-transform.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\zeros.css.min" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\jsmin.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\jsmin_2_0_9.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\main.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\write.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\BENCHMARKS" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\CHANGES" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\CLASSIFIERS" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\DESCRIPTION" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\PROVIDES" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\SUMMARY" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\LICENSE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\MANIFEST" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\package.cfg" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\PKG-INFO" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\README.rst" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\rjsmin.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\setup.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\bin\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\bin\update" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\archive_info.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\base_config.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\base_config_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\cloud_storage_info.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\cloud_storage_info_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\dependency_info.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\dependency_info_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\dependency_manager_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\dependency_manager_util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\dependency_manager_util_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\exceptions.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\local_path_info.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\local_path_info_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\manager.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\uploader.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\uploader_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\dependency_manager\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\PRESUBMIT.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\dependency_manager\pylintrc" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\bin\generate_md_docs" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\bin\run_py_devicetests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\bin\run_py_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\BUILD.gn" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\apk_helper.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\apk_helper_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\app_ui.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\app_ui_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\battery_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\battery_utils_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\constants\chrome.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\constants\file_system.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\constants\webapk.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\constants\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\crash_handler.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\crash_handler_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\decorators.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\decorators_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_blacklist.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_blacklist_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_errors.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_errors_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_list.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_signal.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_temp_file.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_test_case.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_utils_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\device_utils_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\fastboot_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\fastboot_utils_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\flag_changer.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\flag_changer_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\flag_changer_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\forwarder.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\install_commands.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\logcat_monitor.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\logcat_monitor_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\md5sum.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\md5sum_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\cache_control.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\perf_control.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\perf_control_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\perf_control_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\surface_stats_collector.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\thermal_throttle.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\perf\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\ports.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\aapt.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\adb_compatibility_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\adb_wrapper.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\adb_wrapper_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\adb_wrapper_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\build_tools.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\dexdump.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\fastboot.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\gce_adb_wrapper.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\intent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\keyevent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\shared_prefs.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\shared_prefs_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\split_select.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\version_codes.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\settings.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\adb_run_shell_cmd.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\cpufreq.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\device_monitor.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\device_monitor_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\device_recovery.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\device_status.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\flash_device.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\keyboard.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\provision_devices.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\screenshot.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\script_common.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\script_common_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\system_app.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\system_app_devicetest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\system_app_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\unlock_bootloader.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\video_recorder.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\wait_for_devices.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\tools\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\valgrind_tools\base_tool.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\valgrind_tools\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\base_error.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\constants\exit_codes.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\constants\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\devil_dependencies.json" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\devil_env.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\devil_env_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\cmd_helper.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\cmd_helper_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\file_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\find_usb_devices.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\find_usb_devices_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\geometry.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\geometry_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\host_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\lazy\weak_constant.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\lazy\weak_constant_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\lazy\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\logging_common.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\lsusb.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\lsusb_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\markdown.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\markdown_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\mock_calls.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\mock_calls_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\parallelizer.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\parallelizer_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\reraiser_thread.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\reraiser_thread_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\reset_usb.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\run_tests_helper.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\signal_handler.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\timeout_retry.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\timeout_retry_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\usb_hubs.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\watchdog_timer.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\zip_utils.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\zip_utils_test.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\utils\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\docs\adb_wrapper.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\docs\device_blacklist.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\docs\device_utils.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\docs\markdown.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\docs\persistent_device_list.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\PRESUBMIT.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\pylintrc" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\README.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\README.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\bin\adb_profile_chrome" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\bin\adb_profile_chrome_startup" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\bin\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\bin\systrace" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\PRESUBMIT.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\chrome_startup_tracing_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\chrome_startup_tracing_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\chrome_tracing_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\chrome_tracing_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\ddms_tracing_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\ddms_tracing_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\fake_agent_1.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\fake_agent_2.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\flags.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\main.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\perf_tracing_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\perf_tracing_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\profiler.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\profiler_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\run_tests" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\third_party\COPYING" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\third_party\perf_to_tracing.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\third_party\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\ui.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\profile_chrome\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\pylintrc" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\README.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\AUTHORS" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\decorators.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\LICENSE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\monitor_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\output_generator.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\output_generator_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\README.md" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\run_systrace.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\systrace_runner.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_data" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_data_raw" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_data_stripped" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_extracted_tgids" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_extracted_threads" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_fixed_tgids" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_missing_tgids" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\atrace_procfs_dump" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\profile-chrome_systrace_perf_chrome_data" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\trace_result.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\agents_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\android_process_data_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_from_file_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_from_file_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\atrace_process_dump.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\ftrace_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\ftrace_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\walt_agent.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\walt_agent_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_agents\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\tracing_controller.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\update_systrace_trace_viewer.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\util.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\linux-product_info.patch" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\rfc2217.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\serialcli.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\serialjava.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\serialposix.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\serialutil.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\serialwin32.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\sermsdos.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\list_ports.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\list_ports_linux.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\list_ports_osx.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\list_ports_posix.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\list_ports_windows.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\miniterm.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\tools\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\urlhandler\protocol_hwgrep.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\urlhandler\protocol_loop.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\urlhandler\protocol_rfc2217.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\urlhandler\protocol_socket.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\urlhandler\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\win32.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\serial\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\zipfile\LICENSE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\zipfile\README.chromium" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\zipfile\zipfile_2_7_13.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\tracing\tracing\trace_data\trace_data.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\tracing\tracing\trace_data\trace_data_unittest.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\tracing\tracing\trace_data\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\tracing\tracing\__init__.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\tracing\tracing_project.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\NOTICE" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\systrace.py" />
+    <None Include="platform-tools_r28.0.2-windows\platform-tools\systrace\UPSTREAM_REVISION" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="trashcan_cwz_icon.ico" />
+    <None Include="close.png" />
+    <None Include="PictureBox2.Image.png" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\adb.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\AdbWinApi.dll" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\AdbWinUsbApi.dll" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\api\api-versions.xml" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\deployagent.jar" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\deploypatchgenerator.jar" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\dmtracedump.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\etc1tool.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\fastboot.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\hprof-conv.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\libwinpthread-1.dll" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\make_f2fs.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\mke2fs.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\NOTICE.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\sqlite3.exe" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\rules\catapult-camelcase.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\eslint\tests\catapult-camelcase.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_trace_event\README.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_utils\py_utils\test_data\foo.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\wikipedia.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\bench\wikipedia.min.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\api-objects.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\crarr.png" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\epydoc.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\epydoc.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\help.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\identifier-index.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\index.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\module-tree.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\rcssmin-module.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\rcssmin-pysrc.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\docs\apidoc\redirect.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\rcssmin.c" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_00.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_01.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_02.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_03.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_04.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_05.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_06.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_07.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_08.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_09.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_10.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\atgroup_11.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\comment_00.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\comment_01.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\comment_02.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\comment_03.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\comment_04.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_00.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_01.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_02.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_03.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_04.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_05.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\escape_06.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\first_00.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\first_01.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\first_02.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_00.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_01.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_02.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_03.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_04.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_05.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_06.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_07.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_08.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\main\url_09.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\background-position.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\border-none.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\box-model-hack.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527974.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527991.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2527998.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\bug2528034.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\charset-media.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\color-simple.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\color.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\comment.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\concat-charset.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-doublequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-eof.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-linebreakindata.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-noquotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-singlequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-base64-twourls.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-dbquote-font.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-doublequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-noquotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-nonbase64-singlequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-noquote-multiline-font.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-doublequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-noquotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-singlequotes.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-realdata-yuiapp.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dataurl-singlequote-font.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\decimals.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\dollar-header.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\font-face.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\ie5mac.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-empty-class.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-multi.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\media-test.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\opacity-filter.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-case.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-new-line.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\preserve-strings.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\pseudo-first.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\pseudo.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\special-comments.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\star-underscore-hacks.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\string-in-comment.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\webkit-transform.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rcssmin\tests\yui\zeros.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\apiviewer.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\bootstrap.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\DateTimeShortcuts.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\jquery-1.7.1.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\jsmin.c" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\knockout-2.0.0.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\bench\markermanager.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\api-objects.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\crarr.png" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\epydoc.css" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\epydoc.js" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\help.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\identifier-index.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\index.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\module-tree.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\redirect.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\rjsmin-module.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\docs\apidoc\rjsmin-pysrc.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\common\py_vulcanize\third_party\rjsmin\rjsmin.c" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\test\data\push_directory\push_directory_contents.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\devil\devil\android\sdk\test\data\push_file.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\Application.mk" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\atrace_process_dump.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\atrace_process_dump.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\file_utils.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\file_utils.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\libmemtrack_wrapper.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\libmemtrack_wrapper.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\logging.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\main.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\process_info.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\process_memory_stats.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\process_memory_stats.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\procfs_utils.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\procfs_utils.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\time_utils.cc" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\atrace_helper\jni\time_utils.h" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\prefix.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\suffix.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\systrace_trace_viewer.html" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\compressed_atrace_data.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\systrace\systrace\test_data\decompressed_atrace_data.txt" />
+    <Content Include="platform-tools_r28.0.2-windows\platform-tools\systrace\catapult\third_party\pyserial\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
