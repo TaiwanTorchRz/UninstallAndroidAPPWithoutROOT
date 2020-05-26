@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Threading
-
 Public Class Home
     Dim nOldWndLeft, nOldWndTop, nClickX, nClickY As Integer
     Dim logadd As String = ""
@@ -11,20 +10,16 @@ Public Class Home
         nClickX = e.X
         nClickY = e.Y
     End Sub
-
     Dim listthr As Thread '宣告多線程
-
     Dim reloadthr As Thread
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MsgBox("注意:部分中國手機無法支援!!" + vbCrLf + "請不要嘗試解除安裝你沒把握的應用程式" + vbCrLf + "解除安裝系統必要程式會造成Android系統的損壞" + vbCrLf + "GitTorch Studio 並不會為您的誤操作負責" + vbCrLf + "當您按下確定之後即同意以上條款", vbExclamation, "免責聲明")
-
         Dim checkFile As Thread
         checkFile = New Thread(AddressOf Me.checkFile)
         reloadthr = New Thread(AddressOf Me.reload)
         checkFile.Start()
         Timer1.Enabled = True
         Timer1.Start()
-
     End Sub
     Public Sub checkFile()
         If Not Directory.Exists(Application.LocalUserAppDataPath + "platform-tools") Then
@@ -49,16 +44,11 @@ Public Class Home
         End If
         logadd += "處理完畢..."
         reloadthr.Start()
-
     End Sub
-
-
     Function adb(Arguments As String) As String
         Try
-
             Dim My_Process As New Process()
             Dim My_Process_Info As New ProcessStartInfo()
-
             My_Process_Info.FileName = "cmd.exe" ' Process filename
             My_Process_Info.Arguments = Arguments ' Process arguments
             My_Process_Info.WorkingDirectory = Application.LocalUserAppDataPath + "platform-tools" 'this directory can be different in your case.
@@ -81,7 +71,6 @@ Public Class Home
         Catch ex As Exception
             Return ex.Message
         End Try
-
         Return "OK"
     End Function
     '刷新
@@ -188,9 +177,7 @@ Public Class Home
             boxSearch.Text = "搜尋..."
             Label2.Text = "選擇應用程式"
         Catch
-
         End Try
-
     End Sub
     Private Sub BoxSearch_MouseClick(sender As Object, e As EventArgs) Handles boxSearch.MouseClick
         If boxSearch.Text = "搜尋..." Then
@@ -212,7 +199,6 @@ Public Class Home
         reloadthr = New Thread(AddressOf Me.reload)
         reloadthr.Start()
     End Sub
-
     Private Sub BoxSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles boxSearch.KeyDown
         If e.KeyCode = "13" Then
             Button2_Click(sender, e)
@@ -223,22 +209,16 @@ Public Class Home
         reloadthr.Start()
         Return 0
     End Function
-
     Private Sub Label1_MouseHover(sender As Object, e As EventArgs) Handles Label1.MouseHover, Label1.MouseEnter
         Label1.ForeColor = Color.Red
     End Sub
-
     Private Sub Label1_MouseLeave(sender As Object, e As EventArgs) Handles Label1.MouseLeave
         Label1.ForeColor = DefaultForeColor
     End Sub
-
-
     Private Sub BoxSearch_Leave(sender As Object, e As EventArgs) Handles boxSearch.Leave
         boxSearch.Text = "搜尋..."
     End Sub
-
     Dim uninstallthr As Thread
-
     Private Sub btnUninstall_Click(sender As Object, e As EventArgs) Handles btnUninstall.Click
         Try
             Dim uninstallappname As String
@@ -253,9 +233,7 @@ Public Class Home
             uninstallappname = ListBox1.SelectedItem.ToString
             Uninstall(uninstallappname, sender, e)
         Catch
-
         End Try
-        'uninstallthr = New Thread(AddressOf Me.Uninstall)
     End Sub
 End Class
 
